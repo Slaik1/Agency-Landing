@@ -1,0 +1,342 @@
+@import "normalize.scss"
+@import "reset.scss"
+*
+    box-sizing: border-box
+
+body
+    font-family: 'Open Sans', sans-serif
+
+.container
+    max-width: 1175px
+    margin: 0 auto
+
+a
+    text-decoration: none
+
+h1,h2,h3,h4,h5,h6
+    font-family: 'Oswald', sans-serif
+
+h1
+    letter-spacing: 5px
+
+.nav
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    &__list
+        display: flex
+    li
+        position: relative
+        margin-right: 58px
+        font-size: 14px
+        letter-spacing: 2px
+        text-transform: uppercase
+        &:last-child
+            margin-right: 0px
+        a
+            color: #FFFFFF
+            line-height: 21px
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            width: 18px
+            height: 2px
+            right: 0px
+            background: #4CAF50
+            transition: all 0.5s ease
+        &:hover
+            &::after
+                width: 100%
+                
+            
+
+.header
+    position: relative
+    margin-bottom: 149px
+    background-image: url(../img/start-photo.jpg)
+    background-size: cover
+    color: #FFFFFF
+    transition: 0.6s ease
+    .container
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        height: 100vh
+        padding: 79px 0px 19px
+    &__offer
+        text-align: center
+        h1
+            margin-bottom: 25px
+            font-size: 72px
+            text-transform: uppercase
+        p
+            font-size: 20px
+    &__counter
+        display: flex
+        align-items: flex-end
+        height: 36px
+        p
+            margin-right: 9px
+            font-size: 20px
+            font-family: 'Oswald', sans-serif
+            font-weight: 700
+            color: rgba(255,255,255,0.43)
+            user-select: none
+            cursor: pointer
+            transition: 0.6s ease
+            &:hover
+                color: rgba(255,255,255,1)
+            &.active
+                position: relative
+                z-index: 2
+                font-size: 36px
+                color: rgb(255,255,255)
+                &::after
+                    content: ''
+                    position: absolute
+                    z-index: -1
+                    display: block
+                    width: 110%
+                    height: 2px
+                    right: -5%
+                    top: calc( 50% + 1px )
+                    background: #4CAF50
+                    transition: all 0.5s ease
+
+.about
+    min-height: 559px
+    margin-bottom: 114px
+    &__wrapper
+        position: relative
+        &__text-1
+            position: absolute
+            left: 51px
+            top: 219px
+            z-index: 4
+        &__text-2
+            position: absolute
+            right: 0px
+            top: 404px
+        &__man-1
+            position: absolute
+            top: 0px
+            left: 193px
+            z-index: 3
+        &__rectangle
+            position: absolute
+            top: 62px
+            left: 403px
+            width: 309px
+            height: 418px
+            background: rgba(76,175,80,0.4 )
+            z-index: 2
+        &__man-2
+            position: absolute
+            top: 168px
+            right: 260px
+    h2
+        position: absolute
+        left: 0px
+        top: 73px
+        font-size: 36px
+        font-weight: 700
+        letter-spacing: 2.3px
+        text-transform: uppercase
+    h3
+        position: absolute
+        left: 0px
+        top: 130px
+        font-family: 'Open Sans', sans-serif
+        font-size: 42px
+        letter-spacing: 2.7px
+        text-transform: uppercase
+    p
+        font-family: 'Open Sans', sans-serif
+        font-size: 15px
+        letter-spacing: 1.3px
+        line-height: 25px
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            width: 20px
+            height: 2px
+            top: 13px
+            left: -29px
+            background: #353535
+
+.services
+    min-height: 690px
+    background: #FBFBFB
+    padding-top: 135px
+    margin-bottom: 130px
+    
+    &__list
+        display: flex
+        justify-content: space-between
+        margin-bottom: 200px
+    &__title
+        margin-bottom: 85px
+        h2
+            position: relative
+            font-size: 48px
+            line-height: 71px
+            font-weight: 700px
+            letter-spacing: 3.1px
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            width: 45px
+            height: 2px
+            background: #000000
+        
+.amenities
+    .amenities__item-branding
+        position: relative
+        width: 373px
+        height: 260px
+        padding: 53px 43px 35px 43px
+        background: #FFFFFF
+        -webkit-box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+        -moz-box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+        box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+        &::after
+            content: ''
+            position: absolute
+            display: block
+            width: 100%
+            height: 3px
+            bottom: 0px
+            left: 0px
+            background: #70BF73
+            opacity: 0
+            transition: opacity 0.5s ease-in-out
+        .amenities__item-branding__text
+            margin-bottom: 19px
+            font-size: 14px
+            line-height: 25px
+        .amenities__item-branding__read-more
+            color: #000
+            opacity: 0.5
+            font-family: 'Oswald', sans-serif
+            font-size: 10px
+            font-weight: 300
+            letter-spacing: 0.6px
+            text-transform: uppercase
+        .amenities__item-branding__round
+            position: absolute
+            opacity: 0.5
+            width: 50px
+            height: 50px
+            top: 50px
+            right: 50px
+            border-radius: 30px
+            -webkit-box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+            -moz-box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+            box-shadow: 5px 5px 10px 2px rgba(87, 104, 116, 0.2)
+        h3
+            margin-bottom: 36px
+            font-size: 20px
+            font-weight: 300
+            line-height: 30px
+            letter-spacing: 1.3px
+            text-transform: uppercase
+            
+            &::after
+                    content: ''
+                    position: absolute
+                    display: block
+                    width: 35px
+                    height: 2px
+                    top: 90px
+                    background: rgba(0, 0, 0, 0)   
+                    transition: all 0.5s ease
+        img
+            position: absolute
+            opacity: 0.5
+            top: 63px
+            right: 62px
+        &:hover
+            .amenities__item-branding__read-more
+                opacity: 1
+            .amenities__item-branding__round
+                opacity: 1
+            img
+                opacity: 1
+            h3::after
+                background: rgba(0, 0, 0, 1)   
+                 
+            &::after
+                opacity: 1
+
+.footer
+    min-height: 700px
+    &__media
+        min-height: 300px
+        display: flex
+        justify-content: center
+        &__work
+            background: #FBFBFB
+        &__contact
+            background: #70BD59
+    &__socials
+        padding-top: 122px
+        min-height: 339px
+        background: #2E2E2E
+        text-align: center
+        p
+            font-family: 'Oswald', sans-serif
+            font-size: 13px
+            font-weight: 300
+            line-height: 19px
+            letter-spacing: 0.8px
+            color: #FFF
+        &__adress
+            margin-bottom: 10px
+        &__number
+            margin-bottom: 50px
+        &__links
+            img
+                margin-right: 15px
+                &:last-child
+                    margin-right: 0px
+    &__copyright
+        min-height: 61px
+        background: #252525
+        display: flex
+        justify-content: center
+        align-items: center
+        p
+            font-family: 'Oswald', sans-serif
+            color: #FFF
+            font-size: 13px
+            font-weight: 300
+            line-height: 19px
+            letter-spacing: 0.8
+
+.case-white
+    color: #FFF
+    
+.contact-case
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100vw
+    padding: 69px 0px 100px 0px
+    img
+        width: 35px
+        margin-bottom: 19px
+    h3
+        margin-bottom: 22px
+        font-size: 24px
+        font-weight: 400
+        line-height: 36px
+        letter-spacing: 2.7px
+
+    p
+        font-size: 14px
+        line-height: 16px
+        letter-spacing: 1.6px
