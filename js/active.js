@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded',() =>{
 const header = document.querySelector('.header')
 const headerCounter = document.querySelector('.header__counter').children
-const imageArray = ['url(../img/start-photo.jpg)','url(../img/mountains.jpg)','url(../img/sun.jpg)']
+const imageArray = ['url(img/start-photo.jpg)','url(img/mountains.jpg)','url(img/sun.jpg)']
 let active = 0
 
 const slider ={
